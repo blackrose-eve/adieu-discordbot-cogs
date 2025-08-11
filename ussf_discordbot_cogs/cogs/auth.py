@@ -66,7 +66,7 @@ class Auth(commands.Cog):
                 name="Auth Link", value=url, inline=False
             )
             embed.set_footer(
-                text="Lovingly developed for Init.™ by AaronRin and ArielKable")
+                text="Lovingly developed for Init.™ by AaronRin and ArielKable. Customized for Space Force by Jacob and Jernee.")
 
             return await ctx.respond(embed=embed)
 

@@ -39,7 +39,7 @@ class About(commands.Cog):
         )
 
         embed.set_footer(
-            text="Lovingly developed for Init.™ and all EvE Nerds by AaronRin and ArielKable"
+            text="Lovingly developed for Init.™ and all EvE Nerds by AaronRin and ArielKable. Customized for Space Force by Jacob and Jernee."
         )
 
         if not ctx.guild:
@@ -78,7 +78,7 @@ class About(commands.Cog):
             if ctx.guild.description:
                 embed.description = ctx.guild.description
             embed.set_footer(
-                text="AuthBot Lovingly developed for Init.™ by AaronRin and ArielKable")
+                text="AuthBot Lovingly developed for Init.™ by AaronRin and ArielKable. Customized for Space Force by Jacob and Jernee.")
 
             members = ctx.guild.member_count
             embed.add_field(name="Unwilling Monitorees:",

@@ -19,5 +19,5 @@ def register_cogs():
         #"ussf_discordbot_cogs.cogs.admin",
         "ussf_discordbot_cogs.cogs.auth",
         "ussf_discordbot_cogs.cogs.recruit_me",
-        "ussf_discordbot_cogs.cogs.welcome",
+        #"ussf_discordbot_cogs.cogs.welcome",
     ]

@@ -7,6 +7,7 @@ from discord.ext import commands
 
 # AA Contexts
 from aadiscordbot.app_settings import get_site_url
+from ussf_discordbot_cogs.helper import unload_cog
 
 logger = logging.getLogger(__name__)
 
@@ -77,4 +78,5 @@ class Auth(commands.Cog):
 
 
 def setup(bot):
+    unload_cog(bot=bot, cog_name="Auth")
     bot.add_cog(Auth(bot))

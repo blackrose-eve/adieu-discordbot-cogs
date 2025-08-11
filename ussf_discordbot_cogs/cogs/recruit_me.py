@@ -9,6 +9,7 @@ from discord.ext import commands
 # AA Contexts
 from django.conf import settings
 from django.utils import timezone
+from ussf_discordbot_cogs.helper import unload_cog
 
 from .. import app_settings
 
@@ -84,4 +85,5 @@ class RecruitMe(commands.Cog):
 
 
 def setup(bot):
+    unload_cog(bot=bot, cog_name="RecruitMe")
     bot.add_cog(RecruitMe(bot))

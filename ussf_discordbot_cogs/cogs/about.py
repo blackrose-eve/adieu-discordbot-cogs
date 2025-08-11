@@ -8,6 +8,8 @@ from discord.ext import commands
 from aadiscordbot import __branch__, __version__
 from aadiscordbot.app_settings import get_site_url
 
+from ussf_discordbot_cogs.helper import unload_cog
+
 logger = logging.getLogger(__name__)
 
 
@@ -105,4 +107,5 @@ class About(commands.Cog):
 
 
 def setup(bot):
+    unload_cog(bot=bot, cog_name="About")
     bot.add_cog(About(bot))

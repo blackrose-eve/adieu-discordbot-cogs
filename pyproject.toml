@@ -14,7 +14,7 @@ keywords = [
     "eveonline",
     "us_space_force",
 ]
-license = { file = "LICENSE" }
+#license = { file = "LICENSE" }
 authors = [
     { name = "Andrew Evans", email = "ade1987@pm.me" },
 ]

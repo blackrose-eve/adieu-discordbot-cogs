@@ -7,7 +7,7 @@ requires = [
 [project]
 name = "ussf-discordbot-cogs"
 description = "US-SF customized cogs for aa-discordbot"
-readme = "README.md"
+readme = "readme.md"
 keywords = [
     "allianceauth",
     "discord",

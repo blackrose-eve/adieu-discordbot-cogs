@@ -8,7 +8,7 @@ import requests
 __version__ = "0.0.1"
 __title__ = "US-SF Discordbot Cogs"
 
-__package_name__ = "us-sf-discordbot-cogs"
+__package_name__ = "ussf-discordbot-cogs"
 __package_name_verbose__ = "US Space Force Discordbot Cogs"
 __package_name_useragent__ = "US-SF-Discordbot-Cogs"
 __app_name__ = "ussf_discordbot_cogs"

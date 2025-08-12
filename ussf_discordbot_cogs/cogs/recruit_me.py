@@ -85,5 +85,5 @@ class RecruitMe(commands.Cog):
 
 
 def setup(bot):
-    unload_cog(bot=bot, cog_name="RecruitMe")
+    #unload_cog(bot=bot, cog_name="RecruitMe")
     bot.add_cog(RecruitMe(bot))

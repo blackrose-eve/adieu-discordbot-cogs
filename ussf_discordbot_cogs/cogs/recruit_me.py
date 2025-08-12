@@ -11,7 +11,7 @@ from django.conf import settings
 from django.utils import timezone
 from ussf_discordbot_cogs.helper import unload_cog
 
-from .. import app_settings
+from aadiscordbot import app_settings
 
 logger = logging.getLogger(__name__)
 

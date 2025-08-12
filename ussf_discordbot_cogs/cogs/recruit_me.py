@@ -39,9 +39,17 @@ class RecruitMe(commands.Cog):
         )
         msg = (f"<@{member.id}> is hunting for a recruiter!\n\n"
                f"Someone from <@&{settings.RECRUITER_GROUP_ID}> will get in touch soon!")
-        embd = Embed(title="Private Thread Guide",
-                     description="To add a person to this thread simply `@ping` them. This works with `@groups` as well to bulk add people to the channel. Use wisely, abuse will not be tolerated.\n\nThis is a beta feature if you experience issues please contact the admins. :heart:")
-        await th.send(msg, embed=embd)
+        embed = discord.Embed(title="US Space Force Recruitment",
+                            description="Hello (<@{member.id}>)! We're glad you're interested in joining us!\n\nIn order to proceed, you will need to set up authentication for all your characters that you will use with our Corporation. Once that's done, we'll finalize the recruitment process with a voice interview with <@&{settings.RECRUITER_GROUP_ID}>.\n\nFollow the links below to get started:\n\n> **Sign into our Alliance Authentication service:**\nhttps://auth.spaceforce.space/dashboard/\n\n> **After logging in, click on the Login button on this page in the Char Link box:**\nhttps://auth.spaceforce.space/charlink/\n\n> **Link your discord account here:**\nhttps://auth.spaceforce.space/services/\n\n**Disclaimer**\nThese services **DO NOT** obtain private account information such as username and passwords. We utilize these services to ensure safety within our sovereignty, and provide pilots with information.",
+                            colour=0x00b0f4,
+                            timestamp=datetime.now())
+
+        embed.set_image(url="https://zkillboard.com/corporation/98765367/")
+
+        embed.set_thumbnail(url="https://images.evetech.net/corporations/98765367/logo")
+
+        embed.set_footer(text="Crafted for US Space Force, based on AA Discordbot")
+        await th.send(msg, embed=embed)
         await ctx.response.send_message(content="Recruitment thread created!", view=None, ephemeral=True)
 
     @commands.slash_command(

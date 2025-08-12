@@ -40,10 +40,8 @@ class RecruitMe(commands.Cog):
         msg = (f"<@{member.id}> is hunting for a recruiter!\n\n"
                f"Someone from <@&{settings.RECRUITER_GROUP_ID}> will get in touch soon!")
         embd = Embed(title="US Space Force Recruitment",
-                            description="Hello (<@{member.id}>)! We're glad you're interested in joining us!\n\nIn order to proceed, you will need to set up authentication for all your characters that you will use with our Corporation. Once that's done, we'll finalize the recruitment process with a voice interview with <@&{settings.RECRUITER_GROUP_ID}>.\n\nFollow the links below to get started:\n\n> **Sign into our Alliance Authentication service:**\nhttps://auth.spaceforce.space/dashboard/\n\n> **After logging in, click on the Login button on this page in the Char Link box:**\nhttps://auth.spaceforce.space/charlink/\n\n> **Link your discord account here:**\nhttps://auth.spaceforce.space/services/\n\n**Disclaimer**\nThese services **DO NOT** obtain private account information such as username and passwords. We utilize these services to ensure safety within our sovereignty, and provide pilots with information.",
+                            description="Welcome! We're glad you're interested in joining us!\n\nIn order to proceed, you will need to set up authentication for all your characters that you will use with our Corporation. Once that's done, we'll finalize the recruitment process with a voice interview with one of our recruiters!\n\nFollow the links below to get started:\n\n> **Sign into our Alliance Authentication service:**\nhttps://auth.spaceforce.space/dashboard/\n\n> **After logging in, click on the Login button on this page in the Char Link box:**\nhttps://auth.spaceforce.space/charlink/\n\n> **Link your discord account here:**\nhttps://auth.spaceforce.space/services/\n\n**Disclaimer**\nThese services **DO NOT** obtain private account information such as username and passwords. We utilize these services to ensure safety within our sovereignty, and provide pilots with information.",
                             colour=0x00b0f4)
-
-        embd.set_image(url="https://zkillboard.com/corporation/98765367/")
 
         embd.set_thumbnail(url="https://images.evetech.net/corporations/98765367/logo")
 

@@ -5,7 +5,7 @@ Application init
 # Third Party
 import requests
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __title__ = "US-SF Discordbot Cogs"
 
 __package_name__ = "ussf-discordbot-cogs"

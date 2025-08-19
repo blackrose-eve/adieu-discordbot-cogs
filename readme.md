@@ -1,1 +1,1 @@
-US SF Custom Discordbot Cogs for AA DiscordBot
+ADIEU Custom Discordbot Cogs for AA DiscordBot

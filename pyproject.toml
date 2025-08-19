@@ -5,14 +5,14 @@ requires = [
 ]
 
 [project]
-name = "ussf-discordbot-cogs"
-description = "US-SF customized cogs for aa-discordbot"
+name = "adieu-discordbot-cogs"
+description = "ADUIE customized cogs for aa-discordbot"
 readme = "readme.md"
 keywords = [
     "allianceauth",
     "discord",
     "eveonline",
-    "us_space_force",
+    "black_rose",
 ]
 #license = { file = "LICENSE" }
 authors = [
@@ -54,8 +54,8 @@ urls.Tracker = "https://github.com/aevans1987/us-sf-discordbot-cogs/issues"
 
 [tool.hatch.build]
 include = [
-    "/ussf_discordbot_cogs",
+    "/adieu_discordbot_cogs",
 ]
 
 [tool.hatch.version]
-path = "ussf_discordbot_cogs/__init__.py"
+path = "adieu_discordbot_cogs/__init__.py"

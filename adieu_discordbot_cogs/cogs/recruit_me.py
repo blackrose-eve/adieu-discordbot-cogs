@@ -9,7 +9,7 @@ from discord.ext import commands
 # AA Contexts
 from django.conf import settings
 from django.utils import timezone
-from ussf_discordbot_cogs.helper import unload_cog
+from adieu_discordbot_cogs.helper import unload_cog
 
 from aadiscordbot import app_settings
 

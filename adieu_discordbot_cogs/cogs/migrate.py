@@ -7,12 +7,12 @@ from discord.ext import commands
 
 # AA Contexts
 from aadiscordbot.app_settings import get_site_url
-from ussf_discordbot_cogs.helper import unload_cog
+from adieu_discordbot_cogs.helper import unload_cog
 
 logger = logging.getLogger(__name__)
 
 
-class Auth(commands.Cog):
+class Migrate(commands.Cog):
     """
     A Collection of Authentication Tools for Alliance Auth
     """
@@ -21,7 +21,7 @@ class Auth(commands.Cog):
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def auth(self, ctx):
+    async def migrate(self, ctx):
         """
         Returns a link to the AllianceAuth Install
         Used by many other Bots and is a common command that
@@ -45,29 +45,18 @@ class Auth(commands.Cog):
 
         return await ctx.send(embed=embed)
 
-    @commands.slash_command(name='auth')
-    async def auth_slash(self, ctx):
+    @commands.slash_command(name='migrate')
+    async def migrate_slash(self, ctx):
         """
         Returns a link to the AllianceAuth Install
         Used by many other Bots and is a common command that
         users will attempt to run.
         """
         if ctx.guild:
-            embed = Embed(title="AllianceAuth")
-            embed.set_thumbnail(
-                url="https://assets.gitlab-static.net/uploads/-/system/project/avatar/6840712/Alliance_auth.png?width=128"
-            )
-            embed.colour = Color.blue()
+            embed = discord.Embed(description="We have begun the process of decommissioning SeAT and have begun the migration to Alliance Auth. \n\n**You will need to log into here:**\nhttps://auth.black-rose.space\n\n**Then Activate the Discord Service here:**\nhttps://auth.black-rose.space/services/\n\n**Then apply for groups in here:**\nhttps://auth.black-rose.space/groups/\n\nIf you still need assistance please use:\n```\n/help\n```",
+                      colour=0x00b0f4)
 
-            embed.description = "All Authentication functions for this Discord server are handled through our Alliance Auth install"
-
-            url = get_site_url()
-
-            embed.add_field(
-                name="Auth Link", value=url, inline=False
-            )
-            embed.set_footer(
-                text="Lovingly developed for Init.™ by AaronRin and ArielKable. Customized for Space Force by Jacob and Jernee.")
+            embed.set_author(name="SeAT to Auth Migration!")
 
             return await ctx.respond(embed=embed)
 
@@ -78,5 +67,5 @@ class Auth(commands.Cog):
 
 
 def setup(bot):
-    unload_cog(bot=bot, cog_name="Auth")
-    bot.add_cog(Auth(bot))
+    unload_cog(bot=bot, cog_name="Migrate")
+    bot.add_cog(Migrate(bot))

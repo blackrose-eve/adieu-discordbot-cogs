@@ -18,7 +18,7 @@ def register_cogs():
         #"adieu_discordbot_cogs.cogs.about",
         #"adieu_discordbot_cogs.cogs.admin",
         #"adieu_discordbot_cogs.cogs.auth",
-        #"adieu_discordbot_cogs.cogs.recruit_me",
+        "adieu_discordbot_cogs.cogs.recruit_me",
         #"adieu_discordbot_cogs.cogs.welcome",
         "adieu_discordbot_cogs.cogs.migrate",
     ]

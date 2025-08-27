@@ -5,7 +5,7 @@ Application init
 # Third Party
 import requests
 
-__version__ = "0.0.9"
+__version__ = "0.0.10"
 __title__ = "ADIEU Discordbot Cogs"
 
 __package_name__ = "adieu-discordbot-cogs"

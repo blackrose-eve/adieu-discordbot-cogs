@@ -51,7 +51,7 @@ class Migrate(commands.Cog):
         Returns a response about the Migration to Auth from SeAT.
         """
         if ctx.guild:
-            embd = Embed(description="We have begun the process of decommissioning SeAT and have begun the migration to Alliance Auth. \n\n**You will need to log into here:**\nhttps://auth.black-rose.space\n\n**Then Activate the Discord Service here:**\nhttps://auth.black-rose.space/services/\n\n**Then apply for groups in here:**\nhttps://auth.black-rose.space/groups/\n\nIf you still need assistance please use:\n```\n/help\n```",
+            embd = Embed(description="We have begun the process of decommissioning SeAT and have begun the migration to Alliance Auth. \n\n**You will need to log into here:**\nhttps://auth.black-rose.space\n\n**The Activate CharLink here:**\nhttps://auth.black-rose.space/charlink/\n\n**Then Activate the Discord Service here:**\nhttps://auth.black-rose.space/services/\n\n**Then apply for groups in here:**\nhttps://auth.black-rose.space/groups/\n\nIf you still need assistance please use:\n```\n/help\n```",
                       colour=0x00b0f4)
 
             embd.set_author(name="SeAT to Auth Migration!")

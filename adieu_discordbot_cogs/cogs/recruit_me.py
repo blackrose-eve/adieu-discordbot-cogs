@@ -27,13 +27,12 @@ class RecruitMe(commands.Cog):
     async def open_ticket(
         self,
         ctx: discord.Interaction,
-        member: discord.Member,
-        user_tz
+        member: discord.Member
     ):
         sup_channel = settings.RECRUIT_CHANNEL_ID
         ch = ctx.guild.get_channel(sup_channel)
         th = await ch.create_thread(
-            name=f"{member.display_name} | {user_tz}",
+            name=f"{member.display_name} | {timezone.now().strftime('%Y-%m-%d %H:%M')}",
             auto_archive_duration=10080,
             type=discord.ChannelType.private_thread,
             reason=None
@@ -57,13 +56,11 @@ class RecruitMe(commands.Cog):
     async def slash_halp(
         self,
         ctx,
-
-        user_tz=["NA", "EU", "Other"],
     ):
         """
             Get hold of a recruiter
         """
-        await self.open_ticket(ctx, ctx.user, user_tz)
+        await self.open_ticket(ctx, ctx.user)
 
     @commands.message_command(
         name="Create Recruitment Thread",

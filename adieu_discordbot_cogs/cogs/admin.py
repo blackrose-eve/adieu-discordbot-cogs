@@ -426,10 +426,9 @@ class Admin(commands.Cog):
         """
         Queue Update tasks for the character and all alts.
         """
-        if ctx.author.id not in app_settings.get_admins():
+        if ctx.channel.id not in settings.ADMIN_FORCE_SYNC_CHANNELS:
             return await ctx.respond("You do not have permission to use this command", ephemeral=True)
-        elif get((ctx.guild.get_member(ctx.author.roles)).roles, id={settings.RECRUITER_GROUP_ID}):
-            return 
+
         try:
             char = EveCharacter.objects.get(character_name=character)
             alts = char.character_ownership.user.character_ownerships.all().select_related(

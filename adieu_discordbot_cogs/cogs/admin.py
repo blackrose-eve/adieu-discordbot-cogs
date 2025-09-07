@@ -427,7 +427,7 @@ class Admin(commands.Cog):
         Queue Update tasks for the character and all alts.
         """
         if ctx.channel.id not in settings.ADMIN_FORCE_SYNC_CHANNELS:
-            return await ctx.respond("You do not have permission to use this command", ephemeral=True)
+            return await ctx.respond("You do not have permission to use this command here.", ephemeral=True)
 
         try:
             char = EveCharacter.objects.get(character_name=character)

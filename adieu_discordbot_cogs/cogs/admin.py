@@ -428,7 +428,7 @@ class Admin(commands.Cog):
         """
         if ctx.author.id not in app_settings.get_admins():
             return await ctx.respond("You do not have permission to use this command", ephemeral=True)
-        elif get(ctx.author.roles, id={settings.RECRUITER_GROUP_ID}):
+        elif get((ctx.guild.get_member(ctx.author.roles)).roles, id={settings.RECRUITER_GROUP_ID}):
             return 
         try:
             char = EveCharacter.objects.get(character_name=character)

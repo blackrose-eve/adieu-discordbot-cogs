@@ -19,6 +19,7 @@ from discord.ext.commands import Paginator
 # Django
 from django.contrib.auth.models import Group
 from django.core.exceptions import ObjectDoesNotExist
+from django.conf import settings
 
 # Alliance Auth
 from allianceauth.eveonline.models import EveCharacter
@@ -28,7 +29,9 @@ from allianceauth.services.modules.discord.tasks import update_groups, update_ni
 
 # Alliance Auth Discord Bot
 from aadiscordbot import app_settings
-from aadiscordbot.cogs.utils.decorators import sender_is_admin
+from aadiscordbot.cogs.utils.decorators import (
+    sender_is_admin, message_in_channels,
+)
 from aadiscordbot.utils import auth
 
 # Terra Nanotech Discordbot Cogs
@@ -606,7 +609,7 @@ class Admin(commands.Cog):
         description="Search for a Character!",
         autocomplete=search_characters,
     )
-    @sender_is_admin()
+    @message_in_channels(settings.ADMIN_FORCE_SYNC_CHANNELS)
     async def slash_sync(self, ctx, character: str):
         """
         Queue update tasks for the character and all alts.

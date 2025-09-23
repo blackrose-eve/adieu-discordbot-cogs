@@ -30,7 +30,7 @@ from allianceauth.services.modules.discord.tasks import update_groups, update_ni
 # Alliance Auth Discord Bot
 from aadiscordbot import app_settings
 from aadiscordbot.cogs.utils.decorators import (
-    sender_is_admin, message_in_channels,
+    sender_is_admin, message_in_channels, has_any_perm
 )
 from aadiscordbot.utils import auth
 
@@ -609,7 +609,7 @@ class Admin(commands.Cog):
         description="Search for a Character!",
         autocomplete=search_characters,
     )
-    @message_in_channels(settings.ADMIN_FORCE_SYNC_CHANNELS)
+    @has_any_perm(['adieu_discordbot_cogs.force_sync', 'adieu_discordbot_cogs.admin_commands'])
     async def slash_sync(self, ctx, character: str):
         """
         Queue update tasks for the character and all alts.

@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
             ],
             options={
-                'permissions': (('force_sync', 'Can user force sync'), ('admin_commands', 'Can use Admin Commands')),
+                'permissions': (('force_sync', 'Can use force sync'), ('admin_commands', 'Can use Admin commands')),
                 'managed': False,
                 'default_permissions': (),
             },

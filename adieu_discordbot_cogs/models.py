@@ -15,4 +15,4 @@ class General(models.Model):
 
         managed = False
         default_permissions = ()
-        permissions = (("force_sync", "Can user force sync"), ("admin_commands", "Can use Admin Commands"))
+        permissions = (("force_sync", "Can use force sync"), ("admin_commands", "Can use Admin commands"))

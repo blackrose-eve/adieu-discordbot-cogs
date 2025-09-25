@@ -46,11 +46,11 @@ dependencies = [
     "allianceauth-discordbot",
     "django-eveuniverse>=1.3",
 ]
-urls.Changelog = "https://github.com/aevans1987/us-sf-discordbot-cogs/blob/main/changelog.md"
-urls.Documentation = "https://github.com/aevans1987/us-sf-discordbot-cogs/blob/main/readme.md"
-urls.Homepage = "https://github.com/aevans1987/us-sf-discordbot-cogs"
-urls.Source = "https://github.com/aevans1987/us-sf-discordbot-cogs.git"
-urls.Tracker = "https://github.com/aevans1987/us-sf-discordbot-cogs/issues"
+urls.Changelog = "https://github.com/blackrose-eve/adieu-discordbot-cogs/blob/main/changelog.md"
+urls.Documentation = "https://github.com/blackrose-eve/adieu-discordbot-cogs/blob/main/readme.md"
+urls.Homepage = "https://github.com/blackrose-eve/adieu-discordbot-cogs"
+urls.Source = "https://github.com/blackrose-eve/adieu-discordbot-cogs.git"
+urls.Tracker = "https://github.com/blackrose-eve/adieu-discordbot-cogs/issues"
 
 [tool.hatch.build]
 include = [

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+## [0.0.23] - 2025-09-25
+
+### Changed
+- Replaced has_any_perm with sender_has_any_perm in admin.py
+
 ## [0.0.22] - 2025-09-25
 
 ### Added

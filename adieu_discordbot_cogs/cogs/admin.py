@@ -30,7 +30,7 @@ from allianceauth.services.modules.discord.tasks import update_groups, update_ni
 # Alliance Auth Discord Bot
 from aadiscordbot import app_settings
 from aadiscordbot.cogs.utils.decorators import (
-    sender_is_admin, message_in_channels, has_any_perm
+    sender_is_admin, message_in_channels, sender_has_any_perm,
 )
 from aadiscordbot.utils import auth
 
@@ -340,7 +340,7 @@ class Admin(commands.Cog):
         description="Returns a list of all users in the server that do not have a corresponding DiscordUser in Auth",
         guild_ids=app_settings.get_all_servers(),
     )
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def orphans_slash(self, ctx):
         """
         Returns a list of all users in the server that do not have a corresponding DiscordUser in Alliance Auth.
@@ -389,7 +389,7 @@ class Admin(commands.Cog):
         description="Returns a list of all webhooks in the channel",
         guild_ids=app_settings.get_all_servers(),
     )
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def get_webhooks(self, ctx):
         """
         Returns a list of all webhooks in the channel.
@@ -424,7 +424,7 @@ class Admin(commands.Cog):
         description="Returns the uptime of the bot",
         guild_ids=app_settings.get_all_servers(),
     )
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def uptime(self, ctx):
         """
         Returns the uptime of the bot.
@@ -450,7 +450,7 @@ class Admin(commands.Cog):
         description="Returns a list of all AA apps and their versions",
         guild_ids=app_settings.get_all_servers(),
     )
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def versions(self, ctx):
         """
         Returns a list of all AA apps and their versions.
@@ -547,7 +547,7 @@ class Admin(commands.Cog):
         description="Returns the bot's task statistics, including uptime, task stats, rate limits, and pending tasks",
         guild_ids=app_settings.get_all_servers(),
     )
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def stats(self, ctx):
         """
         Returns the bot's task statistics, including uptime, task stats, rate limits, and pending tasks.
@@ -609,7 +609,7 @@ class Admin(commands.Cog):
         description="Search for a Character!",
         autocomplete=search_characters,
     )
-    @has_any_perm(['adieu_discordbot_cogs.force_sync', 'adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.force_sync', 'adieu_discordbot_cogs.admin_commands'])
     async def slash_sync(self, ctx, character: str):
         """
         Queue update tasks for the character and all alts.
@@ -653,7 +653,7 @@ class Admin(commands.Cog):
         guild_ids=app_settings.get_all_servers(),
     )
     @option(name="force", description="Force Sync Everything")
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def sync_commands(self, ctx, force: bool):
         """
         Sync the bot's commands with Discord.
@@ -672,7 +672,7 @@ class Admin(commands.Cog):
         return await ctx.respond("Sync Complete!", ephemeral=True)
 
     @commands.user_command(name="Group Sync", guild_ids=app_settings.get_all_servers())
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def group_sync_user_context(self, ctx, user):
         """
         Sync the groups for a user
@@ -697,7 +697,7 @@ class Admin(commands.Cog):
     @commands.user_command(
         name="Nickname Sync", guild_ids=app_settings.get_all_servers()
     )
-    @has_any_perm(['adieu_discordbot_cogs.admin_commands'])
+    @sender_has_any_perm(['adieu_discordbot_cogs.admin_commands'])
     async def nick_sync_user_context(self, ctx, user):
         """
         Sync the nickname for a user

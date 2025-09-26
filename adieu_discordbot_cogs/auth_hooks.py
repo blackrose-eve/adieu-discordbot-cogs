@@ -17,6 +17,7 @@ def register_cogs():
     return [
         #"adieu_discordbot_cogs.cogs.about",
         "adieu_discordbot_cogs.cogs.admin",
+        "adieu_discordbot_cogs.cogs.where",
         #"adieu_discordbot_cogs.cogs.auth",
         "adieu_discordbot_cogs.cogs.members",
         "adieu_discordbot_cogs.cogs.recruit_me",

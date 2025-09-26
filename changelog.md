@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+## [0.0.26] - 2025-09-25
+
+### Added
+- Added adieu_discordbot_cogs.cogs.where to auth_hooks
+
 ## [0.0.25] - 2025-09-25
 
 ### Added

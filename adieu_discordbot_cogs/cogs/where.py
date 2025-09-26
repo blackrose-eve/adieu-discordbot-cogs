@@ -63,7 +63,7 @@ class WhereStuff(commands.Cog):
     ):
         await ctx.defer(ephemeral=True)
         try:
-            sender_has_any_perm(
+            has_any_perm(
                 ctx.author.id,
                 ['corptools.view_characteraudit']
             )

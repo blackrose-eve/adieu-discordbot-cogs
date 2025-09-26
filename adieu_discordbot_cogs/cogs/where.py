@@ -1,7 +1,7 @@
 import logging
 
 from aadiscordbot.app_settings import get_all_servers
-from aadiscordbot.cogs.utils.decorators import sender_has_any_perm
+from aadiscordbot.cogs.utils.decorators import has_all_perms
 from aadiscordbot.utils.auth import get_auth_user
 from discord import AutocompleteContext, option
 from discord.embeds import Embed

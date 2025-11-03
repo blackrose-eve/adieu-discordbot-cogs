@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+## [0.0.28] - 2025-11-03
+### Changed
+- Made the results of /lookup ephemeral.
+
 ## [0.0.26] - 2025-09-25
 
 ### Added

@@ -23,4 +23,5 @@ def register_cogs():
         "adieu_discordbot_cogs.cogs.recruit_me",
         #"adieu_discordbot_cogs.cogs.welcome",
         "adieu_discordbot_cogs.cogs.migrate",
+        "adieu_discordbot_cogs.cogs.qr",
     ]

@@ -80,7 +80,7 @@ class About(commands.Cog):
             if ctx.guild.description:
                 embed.description = ctx.guild.description
             embed.set_footer(
-                text="AuthBot Lovingly developed for Init.™ by AaronRin and ArielKable. Customized for Space Force by Jacob and Jernee.")
+                text="AuthBot Lovingly developed for Init.™ by AaronRin and ArielKable. Customized for Black Rose by Jacob and Jerneee.")
 
             members = ctx.guild.member_count
             embed.add_field(name="Unwilling Monitorees:",

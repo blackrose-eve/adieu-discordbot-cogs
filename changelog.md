@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+## [0.0.29] - 2025-11-12
+### Added
+- Created QR cog to provide quick response commands
+
 ## [0.0.28] - 2025-11-03
 ### Changed
 - Made the results of /lookup ephemeral.
